@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.AssemblyInfo.cs
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\bin\Debug\net8.0\BoatApp.Data.deps.json
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\bin\Debug\net8.0\BoatApp.Data.runtimeconfig.json
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\bin\Debug\net8.0\BoatApp.Data.dll
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\bin\Debug\net8.0\BoatApp.Data.pdb
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.dll
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\refint\BoatApp.Data.dll
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.pdb
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.genruntimeconfig.cache
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\ref\BoatApp.Data.dll

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "03ogRGi/L2PiasBWhBaKvcszP5Xn6yQQQu35swQObgM=",
+  "Source": "BoatApp.WebApi",
+  "BasePath": "_content/BoatApp.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

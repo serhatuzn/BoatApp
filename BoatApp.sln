@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoatApp.Data", "BoatApp.Data\BoatApp.Data.csproj", "{22BD0537-0A19-46E5-9D87-21A55B456BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoatApp.Business", "BoatApp.Business\BoatApp.Business.csproj", "{392E8253-0D9C-42C1-9F2D-1CD6CC4166BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoatApp.WebApi", "BoatApp.WebApi\BoatApp.WebApi.csproj", "{9051B553-C4D4-4C42-BC05-81650AFFFF88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22BD0537-0A19-46E5-9D87-21A55B456BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22BD0537-0A19-46E5-9D87-21A55B456BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BD0537-0A19-46E5-9D87-21A55B456BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22BD0537-0A19-46E5-9D87-21A55B456BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{392E8253-0D9C-42C1-9F2D-1CD6CC4166BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{392E8253-0D9C-42C1-9F2D-1CD6CC4166BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{392E8253-0D9C-42C1-9F2D-1CD6CC4166BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{392E8253-0D9C-42C1-9F2D-1CD6CC4166BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9051B553-C4D4-4C42-BC05-81650AFFFF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9051B553-C4D4-4C42-BC05-81650AFFFF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9051B553-C4D4-4C42-BC05-81650AFFFF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9051B553-C4D4-4C42-BC05-81650AFFFF88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
