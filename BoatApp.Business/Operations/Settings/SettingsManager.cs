@@ -28,7 +28,7 @@ namespace BoatApp.Business.Operations.Settings
             return mainState;
         }
 
-        public async Task ToogleMaintenence()
+        public async Task ToggleMaintenence()
         {
             var settings = _settingsRepository.Find(1);
             
@@ -42,7 +42,8 @@ namespace BoatApp.Business.Operations.Settings
             }
             catch (Exception ex)
             {
-                throw new Exception("Durum güncellenirken bir hata ile karşılaşıldı", ex);
+                Console.WriteLine($"Veritabanı hatası: {ex.Message}");
+                throw new Exception("Durum güncellenirken bir veritabanı hatası oluştu.", ex);
             }
         }
     }

@@ -248,7 +248,7 @@ namespace BoatApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2025, 1, 19, 19, 36, 17, 656, DateTimeKind.Utc).AddTicks(1356),
+                            CreatedDate = new DateTime(2025, 1, 23, 22, 41, 53, 630, DateTimeKind.Utc).AddTicks(4213),
                             IsDeleted = false,
                             MaintenenceMode = false
                         });

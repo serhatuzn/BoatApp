@@ -13,3 +13,4 @@ C:\Users\User\Desktop\BoatApp\BoatApp.Business\obj\Debug\net8.0\BoatApp.Business
 C:\Users\User\Desktop\BoatApp\BoatApp.Business\obj\Debug\net8.0\refint\BoatApp.Business.dll
 C:\Users\User\Desktop\BoatApp\BoatApp.Business\obj\Debug\net8.0\BoatApp.Business.pdb
 C:\Users\User\Desktop\BoatApp\BoatApp.Business\obj\Debug\net8.0\ref\BoatApp.Business.dll
+C:\Users\User\Desktop\BoatApp\BoatApp.Business\obj\Debug\net8.0\BoatApp.Business.sourcelink.json

@@ -113,7 +113,7 @@
   {
     "ContainingType": "BoatApp.WebApi.Controllers.BoatsController",
     "Method": "UpdateBoatCapacity",
-    "RelativePath": "api/Boats/{id}/capacity",
+    "RelativePath": "api/Boats/{id}/Capacity",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,

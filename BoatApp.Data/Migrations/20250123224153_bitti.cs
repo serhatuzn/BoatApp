@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BoatApp.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class middlewareupdate : Migration
+    public partial class bitti : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,7 +16,7 @@ namespace BoatApp.Data.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "CreatedDate",
-                value: new DateTime(2025, 1, 19, 19, 31, 54, 408, DateTimeKind.Utc).AddTicks(4357));
+                value: new DateTime(2025, 1, 23, 22, 41, 53, 630, DateTimeKind.Utc).AddTicks(4213));
         }
 
         /// <inheritdoc />
@@ -27,7 +27,7 @@ namespace BoatApp.Data.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "CreatedDate",
-                value: new DateTime(2025, 1, 19, 22, 27, 32, 900, DateTimeKind.Utc).AddTicks(3805));
+                value: new DateTime(2025, 1, 23, 21, 56, 36, 913, DateTimeKind.Utc).AddTicks(5580));
         }
     }
 }

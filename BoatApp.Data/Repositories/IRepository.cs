@@ -16,6 +16,6 @@ namespace BoatApp.Data.Repositories
         void Delete(int id);
         TEntity Find(int id);
         IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null);
-        TEntity Get(Expression<Func<TEntity, bool>> predicate = null);
+        TEntity Get(Expression<Func<TEntity, bool>> predicate);
     }
 }

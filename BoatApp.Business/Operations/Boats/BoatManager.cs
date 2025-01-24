@@ -141,7 +141,7 @@ namespace BoatApp.Business.Operations.NewFolder
         {
             var boat = _Boatrepository.Find(id);
 
-            if (boat == null)
+            if (boat is null)
             {
                 return new ServiceMessage
                 {
@@ -150,26 +150,27 @@ namespace BoatApp.Business.Operations.NewFolder
                 };
             }
 
-            boat.Capacity = changeBy;
+            boat.Capacity += changeBy;
 
             _Boatrepository.Update(boat);
 
             try
             {
                 await _unitOfWork.SaveChangesAsync();
-
+                return new ServiceMessage
+                {
+                    IsSucceed = true,
+                    Message = "Tekne kapasitesi başarıyla güncellendi."
+                };
             }
             catch (Exception)
             {
-
-
-                throw new Exception("Tekne kapasitesi güncellenirken bir hata oluştu.");
+                return new ServiceMessage
+                {
+                    IsSucceed = false,
+                    Message = "Tekne kapasitesi güncellenirken bir hata oluştu."
+                };
             }
-
-            return new ServiceMessage
-            {
-                IsSucceed = true,
-            };
         }
 
 
@@ -222,7 +223,6 @@ namespace BoatApp.Business.Operations.NewFolder
             boatEntity.BoatType = boat.BoatType;
             boatEntity.Location = boat.Location;
             boatEntity.Length = boat.Length;
-            boatEntity.Capacity = boat.Capacity;
             boatEntity.ManufactureYear = boat.ManufactureYear;
 
             _Boatrepository.Update(boatEntity);
@@ -241,21 +241,28 @@ namespace BoatApp.Business.Operations.NewFolder
                 };
             }
 
-            var boatFeatures = _BoatFeaturerepository.GetAll(x => x.Id == x.BoatId).ToList();
-            foreach (var feature in boatFeatures)
+            var boatFeatures = _BoatFeaturerepository.GetAll()
+                                              .AsEnumerable() // Bellekte sorgulama yapar
+                                              .Where(x => x.BoatId == boatEntity.Id && x.IsDeleted == false)
+                                              .ToList();
+
+            foreach (var boatFeature in boatFeatures)
             {
-                _BoatFeaturerepository.Delete(feature, false);
+                _BoatFeaturerepository.Delete(boatFeature, false);
             }
 
-            foreach (var featureId in boat.FeatureIds)
+            if (boat.FeatureIds != null)
             {
-                var boatFeature = new BoatFeatureEntity
+                foreach (var featureId in boat.FeatureIds)
                 {
-                    BoatId = boatEntity.Id,
-                    FeatureId = featureId
-                };
+                    var boatFeature = new BoatFeatureEntity
+                    {
+                        BoatId = boatEntity.Id,
+                        FeatureId = featureId
+                    };
 
-                _BoatFeaturerepository.Add(boatFeature);
+                    _BoatFeaturerepository.Add(boatFeature);
+                }
             }
 
             try

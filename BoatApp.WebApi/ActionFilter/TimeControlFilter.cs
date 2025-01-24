@@ -10,7 +10,7 @@ namespace BoatApp.WebApi.ActionFilter
 
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            var now = DateTime.UtcNow.TimeOfDay;
+            var now = DateTime.Now.TimeOfDay;
 
             StartTime = "01:00";
             EndTime = "01:59";
@@ -18,13 +18,17 @@ namespace BoatApp.WebApi.ActionFilter
             if (now >= TimeSpan.Parse(StartTime) && now <= TimeSpan.Parse(EndTime))
             {
                 base.OnActionExecuting(context);
+            }
+
+            else
                 context.Result = new ContentResult
                 {
                     Content = "Bu saatlerde işlem yapamazsınız"
                 };
-            }
-            // Burada zaman kontrolü yapılacak
         }
     }
-
 }
+
+
+
+

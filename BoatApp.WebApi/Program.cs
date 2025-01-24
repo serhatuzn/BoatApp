@@ -103,7 +103,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseMiddleware<MainMiddleWare>();
+app.UseMainMiddleWare();
 
 app.UseHttpsRedirection();
 

@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BoatApp.Data.Migrations
 {
     [DbContext(typeof(BoatAppDbContext))]
-    [Migration("20250119185006_settingEntityAdded")]
-    partial class settingEntityAdded
+    [Migration("20250123224153_bitti")]
+    partial class bitti
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -251,7 +251,7 @@ namespace BoatApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2025, 1, 19, 21, 50, 5, 938, DateTimeKind.Local).AddTicks(5784),
+                            CreatedDate = new DateTime(2025, 1, 23, 22, 41, 53, 630, DateTimeKind.Utc).AddTicks(4213),
                             IsDeleted = false,
                             MaintenenceMode = false
                         });

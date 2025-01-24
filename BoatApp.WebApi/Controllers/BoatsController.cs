@@ -39,7 +39,7 @@ namespace BoatApp.WebApi.Controllers
         public async Task<IActionResult> GetAllBoats()
         {
             var boats = await _boatService.GetAllBoats();
-            return Ok("Boats");
+            return Ok(boats);
         }
 
         [HttpPost]
@@ -68,7 +68,7 @@ namespace BoatApp.WebApi.Controllers
             }
         }
 
-        [HttpPatch("{id}/capacity")]
+        [HttpPatch("{id}/Capacity")]
         [Authorize(Roles = "Admin")]
 
         public async Task<IActionResult> UpdateBoatCapacity(int id, int changeBy)
@@ -112,7 +112,6 @@ namespace BoatApp.WebApi.Controllers
                 BoatType = request.BoatType,
                 Location = request.Location,
                 Length = request.Length,
-                Capacity = request.Capacity,
                 ManufactureYear = request.ManufactureYear
             };
 

@@ -12,3 +12,4 @@ C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\refint\BoatApp.Data.
 C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.pdb
 C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.genruntimeconfig.cache
 C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\ref\BoatApp.Data.dll
+C:\Users\User\Desktop\BoatApp\BoatApp.Data\obj\Debug\net8.0\BoatApp.Data.sourcelink.json

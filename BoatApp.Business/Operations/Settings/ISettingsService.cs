@@ -8,7 +8,7 @@ namespace BoatApp.Business.Operations.Settings
 {
     public interface ISettingsService
     {
-        Task ToogleMaintenence();
+        Task ToggleMaintenence();
 
         bool GetMaintenenceMode();
     }

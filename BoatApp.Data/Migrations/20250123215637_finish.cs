@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BoatApp.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class ılk : Migration
+    public partial class finish : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -68,15 +68,31 @@ namespace BoatApp.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Settings",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    MaintenenceMode = table.Column<bool>(type: "boolean", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ModifiedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Settings", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Email = table.Column<string>(type: "character varying(80)", maxLength: 80, nullable: false),
-                    Password = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    FirstName = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: false),
-                    LastName = table.Column<string>(type: "character varying(40)", maxLength: 40, nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: false),
+                    Password = table.Column<string>(type: "text", nullable: false),
+                    FirstName = table.Column<string>(type: "text", nullable: false),
+                    LastName = table.Column<string>(type: "text", nullable: false),
                     PhoneNumber = table.Column<string>(type: "text", nullable: false),
                     UserType = table.Column<int>(type: "integer", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -174,6 +190,11 @@ namespace BoatApp.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Settings",
+                columns: new[] { "Id", "CreatedDate", "IsDeleted", "MaintenenceMode", "ModifiedDate" },
+                values: new object[] { 1, new DateTime(2025, 1, 23, 21, 56, 36, 913, DateTimeKind.Utc).AddTicks(5580), false, false, null });
+
             migrationBuilder.CreateIndex(
                 name: "IX_BoatFeatures_FeatureId",
                 table: "BoatFeatures",
@@ -206,6 +227,9 @@ namespace BoatApp.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Reservations");
+
+            migrationBuilder.DropTable(
+                name: "Settings");
 
             migrationBuilder.DropTable(
                 name: "Features");

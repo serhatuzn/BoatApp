@@ -14,19 +14,20 @@ namespace BoatApp.Data.Repositories
     public class Repository<TEntity> : IRepository<TEntity>
             where TEntity : BaseEntity
     {
-        private readonly BoatAppDbContext _context;
+        private readonly BoatAppDbContext _db;
         private readonly DbSet<TEntity> _dbSet;
 
-        public Repository(BoatAppDbContext context)
+        public Repository(BoatAppDbContext db)
         {
-            _context = context;
-            _dbSet = _context.Set<TEntity>();
+            _db = db;
+            _dbSet = _db.Set<TEntity>();
         }
 
         public void Add(TEntity entity)
         {
             entity.CreatedDate = DateTime.UtcNow;
             _dbSet.Add(entity);
+            _db.SaveChanges();
         }
 
         public void Delete(TEntity entity, bool softDelete = true)
@@ -67,8 +68,9 @@ namespace BoatApp.Data.Repositories
 
         public void Update(TEntity entity)
         {
-            entity.ModifiedDate = DateTime.Now;
+            entity.ModifiedDate = DateTime.UtcNow;
             _dbSet.Update(entity);
+            _db.SaveChanges();
         }
     }
 }

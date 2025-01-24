@@ -9,6 +9,7 @@ namespace BoatApp.WebApi.MiddleWare
         public MainMiddleWare(RequestDelegate next)
         {
             _next = next;
+            
         }
 
         public async Task Invoke(HttpContext context)

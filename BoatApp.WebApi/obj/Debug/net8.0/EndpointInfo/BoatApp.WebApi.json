@@ -192,7 +192,7 @@
         }
       }
     },
-    "/api/Boats/{id}/capacity": {
+    "/api/Boats/{id}/Capacity": {
       "patch": {
         "tags": [
           "Boats"
@@ -414,7 +414,8 @@
           },
           "capacity": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "manufactureYear": {
             "type": "integer",

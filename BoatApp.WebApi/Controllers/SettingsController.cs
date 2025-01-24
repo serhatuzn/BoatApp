@@ -18,9 +18,10 @@ namespace BoatApp.WebApi.Controllers
 
         [HttpPatch]
         [Authorize(Roles = "Admin")]
+
         public async Task<IActionResult> ToggleMaintenence()
         {
-            await _settingsService.ToogleMaintenence();
+            await _settingsService.ToggleMaintenence();
 
             return Ok();
         }
